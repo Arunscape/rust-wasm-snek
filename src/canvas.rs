@@ -44,20 +44,22 @@ impl Canvas {
         let y = y * self.scaled_height;
 
         self.context.fill_rect(
-            f64::from(x), 
+            f64::from(x),
             f64::from(y),
             f64::from(self.scaled_width),
-            f64::from(self.scaled_height)
+            f64::from(self.scaled_height),
         );
     }
 
-    pub fn clear_all(&self){
+    pub fn clear_all(&self) {
         self.context.set_fill_style_color("white");
         self.context.fill_rect(
             0.0,
             0.0,
-            f64::from(self.width * self.scaled_width),
-            f64::from(self.height * self.scaled_height),
+            // f64::from(self.width * self.scaled_width),
+            // f64::from(self.height * self.scaled_height),
+            f64::from(self.canvas.width()),
+            f64::from(self.canvas.height()),
         )
     }
 }
