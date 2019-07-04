@@ -1,1 +1,0 @@
-[WIP] snake game in rust, using the browser as a 2d renderer
